@@ -1,22 +1,28 @@
-from setuptools import find_packages, setup
+from setuptools import setup, find_packages
 from typing import List
 
-def get_requirements(file_path:str)->List[str]:
-    "this function will return the required packages list"
-    requirements = []
-    hyphen_e = '-e .'
-    with open(file_path) as file_obj:
-        requirements = file_obj.readlines()
-        requirements = [req.replace("\n", "")for req in requirements]
-        if hyphen_e in requirements:
-            requirements.remove(hyphen_e)
-    return requirements
+PROJECT_NAME = "mlproject"
+VERSION = "1.0.0"
+AUTHOR = "Your name"
+DESCRIPTION = "This is my first Machine Learning project"
+REQUIREMENT_FILE_NAME = "requirements.txt"
+HYPHEN_E_DOT = "-e ."
+
+
+def get_requirements_list() -> List[str]:
+    with open(REQUIREMENT_FILE_NAME) as requirement_file:
+        requirement_list = requirement_file.readlines()
+        requirement_list = [requirement_name.replace("\n", "") for requirement_name in requirement_list]
+        if HYPHEN_E_DOT in requirement_list:
+            requirement_list.remove(HYPHEN_E_DOT)
+        return requirement_list
+
 
 setup(
-    name="mlproject",
-    version="0.0.1",
-    author="Ranjit kundu",
-    author_email="rkrnjtkundu10@gmail.com",
+    name=PROJECT_NAME,
+    version=VERSION,
+    author=AUTHOR,
+    description=DESCRIPTION,
     packages=find_packages(),
-    install_requires=get_requirements('requirements.txt')
+    install_requires=get_requirements_list()
 )
