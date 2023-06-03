@@ -1,0 +1,7 @@
+pandas
+numpy
+dill
+scikit-learn
+catboost
+xgboost
+-e .
