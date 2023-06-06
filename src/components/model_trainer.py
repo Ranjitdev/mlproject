@@ -2,6 +2,7 @@ import os
 import sys
 from dataclasses import dataclass
 
+import numpy as np
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.svm import SVR
@@ -98,7 +99,8 @@ class ModelTraier:
             best_model = models[best_model_name[0]]
             if best_model_score<0.6:
                 raise CustomException('No Best Model Found')
-            logging.info(f'Best Model {best_model} Score {best_model_score}')
+            print(f'Best Model {best_model} Score {np.round(best_model_score*100, 2)}')
+            logging.info(f'Best Model {best_model} Score {np.round(best_model_score*100, 2)}')
 
             save_obj(
                 file_path = self.model_trainer_config.trained_model_file_path,

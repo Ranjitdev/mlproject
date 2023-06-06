@@ -1,5 +1,6 @@
 import os
 import sys
+import numpy as np
 from src.exception import CustomException
 from src.logger import logging
 import dill
@@ -36,9 +37,19 @@ def evaluate_model(X_train, X_test, y_train, y_test, models, param):
             train_model_score = r2_score(y_train, y_train_pred)
             test_model_score = r2_score(y_test, y_test_pred)
             report[str(model)] = test_model_score
+            print(f'Model {models[model]}',
+                  f'Train score {np.round(train_model_score*100, 2)}% ',
+                  f'Test score {np.round(test_model_score*100, 2)}%')
             logging.info(
-                f'Model {models[model]}Train score {train_model_score} Test score {test_model_score}'
+                f'Model {models[model]}Train score {train_model_score}% Test score {test_model_score}%'
             )
         return report
+    except Exception as e:
+        raise CustomException(e, sys)
+
+def load_object(file_path):
+    try:
+        with open(file_path,'rb') as file_obj:
+            return dill.load(file_obj)
     except Exception as e:
         raise CustomException(e, sys)

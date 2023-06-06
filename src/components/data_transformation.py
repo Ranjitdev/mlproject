@@ -31,24 +31,26 @@ class DataTransformation:
             ]
             num_pipeline = Pipeline(
                 steps=[
-                    ('imputer',SimpleImputer(strategy='median')),
-                    ('scaler',StandardScaler())
+                    ('imputer', SimpleImputer(strategy='median')),
+                    ('scaler', StandardScaler())
                 ]
             )
             cat_pipeline = Pipeline(
                 steps=[
-                    ('imputer',SimpleImputer(strategy='most_frequent')),
-                    ('one_hot_encoder',OneHotEncoder()),
-                    ('scaler',StandardScaler(with_mean=False))
+                    ('imputer', SimpleImputer(strategy='most_frequent')),
+                    ('one_hot_encoder', OneHotEncoder()),
+                    ('scaler', StandardScaler(with_mean=False))
                 ]
             )
-            logging.info('Data Encoding Done')
+
             preprocesor = ColumnTransformer(
                 [
                     ('num_pipeline',num_pipeline,numerical_columns),
                     ('cat_pipeline',cat_pipeline,catagorical_columns)
                 ]
             )
+            logging.info('Data Encoding Done')
+
             return preprocesor
         except Exception as e:
             raise CustomException(e, sys)
