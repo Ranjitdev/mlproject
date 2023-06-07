@@ -1,10 +1,10 @@
-import pickle
 from flask import Flask, request, render_template
 import pandas as pd
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 from sklearn.preprocessing import StandardScaler
 
-app = Flask(__name__)
+application = Flask(__name__)
+app = application
 
 ##route to homepage
 @app.route('/')

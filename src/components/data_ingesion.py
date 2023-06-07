@@ -38,15 +38,3 @@ class DataIngesion:
             )
         except Exception as e:
             raise CustomException(e, sys)
-
-if __name__=='__main__':
-    obj = DataIngesion()
-    train_data, test_data = obj.initiate_data_ingesion()
-
-    data_transformation = DataTransformation()
-    train_array, test_array, path = data_transformation.initiate_data_transformation(train_data, test_data)
-
-    model_trainer = ModelTraier()
-    score = model_trainer.initiate_model_training(train_array, test_array)
-
-    print(score)
