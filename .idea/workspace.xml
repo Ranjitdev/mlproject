@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a4824aa-4432-4514-a4c4-d8e7741a15be" name="Changes" comment="exception and logging">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/student_score_prediction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/student_score_prediction.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/model.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/preprocessor.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/train.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catboost_info/catboost_training.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catboost_info/learn/events.out.tfevents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catboost_info/learn_error.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catboost_info/time_left.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/data_ingesion.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data_ingesion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/data_transformation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data_transformation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/model_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/exception.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
