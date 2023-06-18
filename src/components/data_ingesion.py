@@ -22,7 +22,7 @@ class DataIngesion:
     def initiate_data_ingesion(self):
         logging.info('Entered the data Ingesion')
         try:
-            df = pd.read_csv(r'notebook\data\stud.csv')
+            df = pd.read_csv(r'notebook/data/stud.csv')
             logging.info('Loaded the dataset')
 
             os.makedirs(os.path.dirname(self.ingesion_config.train_data_path), exist_ok=True)
@@ -38,3 +38,9 @@ class DataIngesion:
             )
         except Exception as e:
             raise CustomException(e, sys)
+
+
+if __name__=='__main__':
+    train_dir, test_dir = DataIngesion().initiate_data_ingesion()
+    train_arr, test_arr, process_pkl_path = DataTransformation().initiate_data_transformation(train_dir, test_dir)
+    ModelTraier().initiate_model_training(train_arr, test_arr)

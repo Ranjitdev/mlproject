@@ -76,6 +76,8 @@ class ModelTraier:
                     'depth': [6, 8, 10],
                     'learning_rate': [0.01, 0.05, 0.1],
                     'iterations': [30, 50, 100]
+
+                    
                 },
                 "AdaBoost Regressor": {
                     'learning_rate': [.1, .01, 0.5, .001],

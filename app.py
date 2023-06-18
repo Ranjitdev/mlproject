@@ -6,10 +6,11 @@ from sklearn.preprocessing import StandardScaler
 application = Flask(__name__)
 app = application
 
-##route to homepage
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/predictdata', methods=['GET', 'POST'])
 def predict_datapoint():
@@ -26,11 +27,11 @@ def predict_datapoint():
             writing_score = float(request.form.get('writing_score'))
         )
         pred_df = data.get_data_as_data_frame()
-        print(pred_df)
 
         predict_pipeline = PredictPipeline()
         results = predict_pipeline.predict(pred_df)
         return render_template('home.html', results=results[0])
+
 
 if __name__=='__main__':
     app.run(debug=True)
